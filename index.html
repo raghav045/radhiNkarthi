@@ -149,6 +149,30 @@
       filter: drop-shadow(0 0 8px rgba(201,169,110,0.5));
     }
 
+    /* ---- Ring glow animation ---- */
+    .floral-icon.ring {
+      animation: ringGlow 2.5s ease-in-out infinite;
+    }
+    @keyframes ringGlow {
+      0%, 100% { filter: drop-shadow(0 0 2px rgba(201,169,110,0.2)); opacity: 0.5; }
+      50%       { filter: drop-shadow(0 0 12px rgba(201,169,110,0.9)); opacity: 1; }
+    }
+
+    /* ---- Heart animation ---- */
+    .floral-icon.heart {
+      display: inline-block;
+      transform-origin: center;
+      animation: heartbeat 1.4s ease-in-out infinite;
+    }
+    @keyframes heartbeat {
+      0%   { transform: scale(1);    }
+      15%  { transform: scale(1.5);  }
+      30%  { transform: scale(1);    }
+      45%  { transform: scale(1.35); }
+      65%  { transform: scale(1);    }
+      100% { transform: scale(1);    }
+    }
+
     /* ---- Date ---- */
     .wedding-date {
       font-family: 'Cormorant Garamond', serif;
@@ -347,24 +371,26 @@
 
   <h1 class="names">
     Radhika
-    <span class="ampersand">&amp;</span>
+    <span class="ampersand">Weds</span>
     Karthik
   </h1>
 
   <div class="floral">
     <div class="floral-line"></div>
     <span class="floral-icon">🌸</span>
-    <span class="floral-icon">💍</span>
+    <span class="floral-icon heart" style="animation-delay:0s">❤️</span>
+    <span class="floral-icon ring">💍</span>
+    <span class="floral-icon heart" style="animation-delay:0.2s">❤️</span>
     <span class="floral-icon">🌸</span>
     <div class="floral-line right"></div>
   </div>
 
   <p class="wedding-date">Friday, 21st August 2026</p>
-  <p class="wedding-location">Wedding Celebration</p>
+
 
   <!-- Countdown -->
   <div class="countdown-wrap" id="countdownSection">
-    <p class="countdown-label">Days until they say &ldquo;I do&rdquo;</p>
+    <p class="countdown-label">Days until forever begins ✨</p>
     <div class="countdown-grid">
       <div class="count-box">
         <span class="count-number" id="days">--</span>
@@ -388,16 +414,16 @@
   <!-- Celebration (shown after wedding date) -->
   <div class="celebration-msg" id="celebrationMsg">
     <p class="big-text">🎉 They're Married! 🎉</p>
-    <p class="sub-text">Wishing Radhika &amp; Karthik a lifetime of love &amp; joy</p>
+    <p class="sub-text">We are married! Thank you for celebrating with us</p>
   </div>
 
   <!-- Quote -->
   <div class="message-card">
     <p class="message-text">
-      "Two souls, one heartbeat — may your love story be written in stars,<br />
-      your laughter echo through every season, and your home always overflow with warmth."
+      "We found in each other a home, a laughter, and a forever —<br />
+      and we can't wait to begin this beautiful journey together."
     </p>
-    <p class="message-attr">With love &amp; blessings</p>
+    <p class="message-attr">— Radhika &amp; Karthik</p>
   </div>
 
   <div class="footer-floral">
